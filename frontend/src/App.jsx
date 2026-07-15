@@ -1,0 +1,24 @@
+/**
+ * App.jsx
+ * -----------------------------------------------------------------------
+ * Root component. Wires up the router and the Auth/Toast context
+ * providers around the route table.
+ * -----------------------------------------------------------------------
+ */
+
+import { BrowserRouter } from 'react-router-dom';
+import { AuthProvider } from './context/AuthContext';
+import { ToastProvider } from './context/ToastContext';
+import AppRoutes from './routes/AppRoutes';
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <ToastProvider>
+        <AuthProvider>
+          <AppRoutes />
+        </AuthProvider>
+      </ToastProvider>
+    </BrowserRouter>
+  );
+}

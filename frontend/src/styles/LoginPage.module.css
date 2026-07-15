@@ -1,0 +1,142 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(160deg, var(--df-ink-900) 0%, var(--df-ink-700) 55%, var(--df-brand-600) 130%);
+  padding: var(--df-space-4);
+}
+
+.panel {
+  width: 100%;
+  max-width: 400px;
+  background: var(--df-surface-0);
+  border-radius: var(--df-radius-lg);
+  box-shadow: 0 20px 60px rgba(10, 14, 20, 0.35);
+  padding: var(--df-space-6);
+}
+
+.brandBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: var(--df-space-6);
+}
+
+.brandMark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--df-radius-md);
+  background: var(--df-ink-900);
+  color: #fff;
+  font-family: var(--df-font-mono);
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: var(--df-space-3);
+}
+
+.brandTitle {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--df-ink-900);
+}
+
+.brandTagline {
+  margin: var(--df-space-1) 0 0;
+  color: var(--df-ink-500);
+  font-size: 0.85rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--df-space-4);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--df-space-2);
+}
+
+.label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--df-ink-700);
+}
+
+.input {
+  border: 1px solid var(--df-border);
+  border-radius: var(--df-radius-sm);
+  padding: var(--df-space-3);
+  font-size: 0.92rem;
+}
+
+.roleToggle {
+  display: flex;
+  border: 1px solid var(--df-border);
+  border-radius: var(--df-radius-sm);
+  overflow: hidden;
+}
+
+.roleOption {
+  flex: 1;
+  padding: var(--df-space-2) var(--df-space-3);
+  background: var(--df-surface-0);
+  border: none;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--df-ink-500);
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.roleOption + .roleOption {
+  border-left: 1px solid var(--df-border);
+}
+
+.roleActive {
+  background: var(--df-brand-100);
+  color: var(--df-brand-600);
+}
+
+.submit {
+  background: var(--df-brand-500);
+  color: #fff;
+  border: none;
+  border-radius: var(--df-radius-sm);
+  padding: var(--df-space-3);
+  font-weight: 700;
+  font-size: 0.92rem;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.submit:hover:not(:disabled) {
+  background: var(--df-brand-600);
+}
+
+.submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.hint {
+  margin: var(--df-space-5) 0 0;
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--df-ink-500);
+  line-height: 1.6;
+}
+
+.hint code {
+  background: var(--df-surface-2);
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-family: var(--df-font-mono);
+}

@@ -1,0 +1,50 @@
+.row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--df-space-4);
+  margin: var(--df-space-5) 0;
+}
+
+.card {
+  background: var(--df-surface-0);
+  border: 1px solid var(--df-border);
+  border-radius: var(--df-radius-md);
+  padding: var(--df-space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--df-space-1);
+  border-top: 3px solid var(--df-ink-500);
+}
+
+.toneOpen {
+  border-top-color: var(--df-status-open);
+}
+.toneProgress {
+  border-top-color: var(--df-status-progress);
+}
+.toneResolved {
+  border-top-color: var(--df-status-resolved);
+}
+.toneTotal {
+  border-top-color: var(--df-brand-500);
+}
+
+.value {
+  font-family: var(--df-font-mono);
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--df-ink-900);
+}
+
+.label {
+  font-size: 0.8rem;
+  color: var(--df-ink-500);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 720px) {
+  .row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

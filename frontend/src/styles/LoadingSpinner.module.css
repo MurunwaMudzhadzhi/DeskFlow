@@ -1,0 +1,37 @@
+.inline {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--df-space-2);
+  color: var(--df-ink-500);
+  font-size: 0.9rem;
+}
+
+.fullscreen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--df-space-3);
+  height: 100%;
+  min-height: 240px;
+  color: var(--df-ink-500);
+}
+
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 2.5px solid var(--df-surface-2);
+  border-top-color: var(--df-brand-500);
+  border-radius: 50%;
+  animation: df-spin 0.7s linear infinite;
+}
+
+.label {
+  font-size: 0.9rem;
+}
+
+@keyframes df-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

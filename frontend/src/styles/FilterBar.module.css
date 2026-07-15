@@ -1,0 +1,35 @@
+.bar {
+  display: flex;
+  gap: var(--df-space-3);
+  margin-bottom: var(--df-space-4);
+  flex-wrap: wrap;
+}
+
+.search {
+  flex: 1;
+  min-width: 220px;
+  border: 1px solid var(--df-border);
+  border-radius: var(--df-radius-sm);
+  padding: var(--df-space-3);
+  font-size: 0.9rem;
+  background: var(--df-surface-0);
+}
+
+.select {
+  border: 1px solid var(--df-border);
+  border-radius: var(--df-radius-sm);
+  padding: var(--df-space-3);
+  font-size: 0.9rem;
+  background: var(--df-surface-0);
+  min-width: 160px;
+}
+
+@media (max-width: 640px) {
+  .bar {
+    flex-direction: column;
+  }
+  .search,
+  .select {
+    width: 100%;
+  }
+}

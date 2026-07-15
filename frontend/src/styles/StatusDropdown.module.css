@@ -1,0 +1,32 @@
+.dropdown {
+  appearance: none;
+  border: 1px solid var(--df-border);
+  border-radius: var(--df-radius-sm);
+  padding: var(--df-space-2) var(--df-space-6) var(--df-space-2) var(--df-space-3);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: var(--df-surface-0);
+  background-image: linear-gradient(45deg, transparent 50%, var(--df-ink-500) 50%), linear-gradient(135deg, var(--df-ink-500) 50%, transparent 50%);
+  background-position: calc(100% - 14px) center, calc(100% - 9px) center;
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat;
+}
+
+.Open {
+  color: var(--df-status-open);
+  border-color: var(--df-status-open);
+  background-color: var(--df-status-open-bg);
+}
+
+.InProgress {
+  color: var(--df-status-progress);
+  border-color: var(--df-status-progress);
+  background-color: var(--df-status-progress-bg);
+}
+
+.Resolved {
+  color: var(--df-status-resolved);
+  border-color: var(--df-status-resolved);
+  background-color: var(--df-status-resolved-bg);
+}

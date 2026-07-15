@@ -1,0 +1,134 @@
+/* Signature motif: a work-order "stub" — a solid card with a colored
+   priority edge and a perforated (dashed) divider before the footer,
+   echoing a torn physical ticket. */
+
+.card {
+  position: relative;
+  background: var(--df-surface-0);
+  border: 1px solid var(--df-border);
+  border-left: 4px solid var(--df-priority-low);
+  border-radius: var(--df-radius-md);
+  padding: var(--df-space-4) var(--df-space-4) var(--df-space-3);
+  box-shadow: var(--df-shadow-card);
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.card:hover {
+  box-shadow: var(--df-shadow-hover);
+  transform: translateY(-1px);
+}
+
+.priorityLow {
+  border-left-color: var(--df-priority-low);
+}
+.priorityMedium {
+  border-left-color: var(--df-priority-medium);
+}
+.priorityHigh {
+  border-left-color: var(--df-priority-high);
+}
+
+.stubTag {
+  position: absolute;
+  top: var(--df-space-3);
+  right: var(--df-space-4);
+  font-family: var(--df-font-mono);
+  font-size: 0.72rem;
+  color: var(--df-ink-500);
+  letter-spacing: 0.03em;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--df-space-3);
+  padding-right: var(--df-space-6);
+}
+
+.title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--df-ink-900);
+  line-height: 1.35;
+}
+
+.statusPill {
+  flex-shrink: 0;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px var(--df-space-2);
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+.statusOpen {
+  color: var(--df-status-open);
+  background: var(--df-status-open-bg);
+}
+.statusProgress {
+  color: var(--df-status-progress);
+  background: var(--df-status-progress-bg);
+}
+.statusResolved {
+  color: var(--df-status-resolved);
+  background: var(--df-status-resolved-bg);
+}
+
+.description {
+  margin: var(--df-space-2) 0 var(--df-space-3);
+  color: var(--df-ink-700);
+  font-size: 0.88rem;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--df-space-4);
+  padding-top: var(--df-space-3);
+  border-top: 1px dashed var(--df-border);
+}
+
+.metaItem {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 0.82rem;
+  color: var(--df-ink-900);
+}
+
+.metaLabel {
+  font-size: 0.68rem;
+  color: var(--df-ink-500);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.priorityTag {
+  font-weight: 700;
+}
+.priorityTag.priorityLow {
+  color: var(--df-priority-low);
+}
+.priorityTag.priorityMedium {
+  color: var(--df-priority-medium);
+}
+.priorityTag.priorityHigh {
+  color: var(--df-priority-high);
+}
+
+.footer {
+  margin-top: var(--df-space-3);
+  padding-top: var(--df-space-3);
+  border-top: 1px dashed var(--df-border);
+  display: flex;
+  justify-content: flex-end;
+}

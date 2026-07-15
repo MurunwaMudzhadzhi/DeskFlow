@@ -1,0 +1,56 @@
+.page {
+  min-height: 100vh;
+  background: var(--df-surface-1);
+}
+
+.content {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: var(--df-space-6) var(--df-space-6) var(--df-space-7);
+}
+
+.pageHeader {
+  margin-bottom: var(--df-space-2);
+}
+
+.pageTitle {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--df-ink-900);
+}
+
+.pageSubtitle {
+  margin: var(--df-space-1) 0 0;
+  color: var(--df-ink-500);
+  font-size: 0.92rem;
+}
+
+.sectionTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--df-ink-900);
+  margin: 0 0 var(--df-space-3);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: var(--df-space-6);
+  align-items: start;
+  margin-top: var(--df-space-5);
+}
+
+.formColumn,
+.listColumn {
+  min-width: 0;
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+  .content {
+    padding: var(--df-space-5) var(--df-space-4) var(--df-space-6);
+  }
+}
